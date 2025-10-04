@@ -1,0 +1,56 @@
+@keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+.animate-spin {animation: spin 1s linear infinite;}
+
+
+.bmi-result-container, #ai-tips-container {
+    transition: all 0.5s ease-out;
+    transform: translateY(10px);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+}
+
+.bmi-result-container.show, #ai-tips-container.show {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 300px;
+    padding-top: 1rem;
+}
+
+
+.input-field {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 1rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    outline: none;
+    transition: all 0.15s;
+}
+
+.input-field:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79,70,229,0.3);
+}
+
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4f46e5;
+    border: none;
+    transition: all 0.15s;
+}
+
+.btn-primary:hover { background-color: #4338ca; transform: scale(1.01);}
+.btn-primary:active { transform: scale(0.99);}
+.btn-primary:focus { outline: 4px solid rgba(79,70,229,0.3); }
+
+
+.error-text { color: #dc2626; font-size: 0.875rem; margin-top: 0.25rem; }
